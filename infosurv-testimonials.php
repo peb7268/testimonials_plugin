@@ -222,7 +222,7 @@ class InfTestimonials
 			endif;
 			
 			$categories 			= $this->extractCategories($testimonials['categories']);
-			$navigation 			= $this->getNavigation( $testimonials, $categories = null );
+			$navigation 			= $this->getNavigation( $categories );
 			$layout 					= array($navigation, $wrapper);
 			$testimonials_return = $this->processTestimonials( $testimonials, $layout);
 			//__e($testimonials, '$testimonials');
@@ -248,10 +248,20 @@ class InfTestimonials
 		return $categories_to_return;
 	}
 	
-	public function getNavigation( $testimonials )
+	public function getNavigation( $categories = null)
 	{
-		require "views/element-navigation.php";
-		return $navigation;
+		//require "views/element-navigation.php";
+		$start = '<div id="filters_wrapper" class="clearfix"><ul id="filters" class="clearfix"><li><a href="#" data-filter="*">show all</a></li>';
+		$body = '';
+		
+		foreach($categories as $i => $value)
+		{
+			$body .= "<li><a href='#' data-filter='.type".$i."'> $value </a></li>";
+		}
+	  
+	  $end = '</ul></div><!-- #filters_wrapper -->';
+	
+	  return $start.$body.$end;
 	}
 	public function grabThumbnail( $post_id )
 	{

@@ -1,4 +1,4 @@
-<?php
+<?php /*
 $navigation = '<div id="filters_wrapper" class="clearfix">
 	<ul id="filters" class="clearfix">
 	  <li><a href="#" data-filter="*">show all</a></li>
@@ -7,3 +7,10 @@ $navigation = '<div id="filters_wrapper" class="clearfix">
 	  <li><a href="#" data-filter=".type0">Case Studies</a></li>
 	</ul>
 </div><!-- #filters_wrapper -->';
+*/
+
+$navigation = function( $categories ){
+
+}
+
+$getnavigation( $categories );
