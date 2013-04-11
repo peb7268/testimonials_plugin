@@ -1,4 +1,7 @@
 #Infosurv Testimonials plugin
+Sandbox URL: http://www.infosurv.com/isotope-testing/?blah=red 
+
+
 ####Todo List: 
 1. Implement PSR-0 standards for autoloading
 2. Configure PHPUnit & WP_TestCase
