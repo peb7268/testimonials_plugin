@@ -1,4 +1,9 @@
 #Infosurv Testimonials plugin
+####Todo List: 
+1. Implement PSR-0 standards for autoloading
+2. Configure PHPUnit & WP_TestCase
+3. Switch over to TDD style of WP Dev
+
 
 ##PSR-0 Autoloading
 Autoloading has three main staple principles:  
